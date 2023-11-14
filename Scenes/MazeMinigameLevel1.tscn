@@ -5,6 +5,11 @@
 
 [node name="MazeLevel1" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 959, 540 )
+current = true
+zoom = Vector2( 1.5, 1.5 )
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 format = 1
