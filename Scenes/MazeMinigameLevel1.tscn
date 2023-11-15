@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://maze_tempassets/tempwall.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/MazeMinigamePlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Maze_FlowerCollectable.tscn" type="PackedScene" id=3]
 
 [node name="MazeLevel1" type="Node2D"]
 
@@ -17,3 +18,12 @@ tile_data = PoolIntArray( 196610, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 225, 150 )
+
+[node name="Flower" parent="." instance=ExtResource( 3 )]
+position = Vector2( 478, 734 )
+
+[node name="Flower2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1312, 742 )
+
+[node name="Flower3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 676, 284 )
