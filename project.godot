@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Wedding Disorganizer"
-run/main_scene="res://Scenes/MazeMinigameLevel1.tscn"
+run/main_scene="res://UI and Menus/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [display]
