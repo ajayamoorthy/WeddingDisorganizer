@@ -7,7 +7,9 @@ var broom1satisfaction = 0;
 var broom2satisfaction = 0;
 
 var minigames = ["res://Scenes/MazeMinigameLevel1.tscn", "res://Scenes/RhythmMinigame.tscn", "res://Scenes/DressSelectionMinigame.tscn", "res://Scenes/DriveToBakeriesMinigame.tscn", "res://Scenes/SeatingArrangementMinigame.tscn", "res://Scenes/BudgetingMinigame.tscn", "res://Scenes/PlanningMinigame.tscn", "res://Scenes/OfficeRoom.tscn"] #which scenes
-var minigameOrder = ["", "", "", "", ""]
+
+#hardcoded for now or else i will kms
+var minigameOrder = ["res://Scenes/RhythmMinigame.tscn", "res://Scenes/MazeMinigameLevel1.tscn", "res://Scenes/DressSelectionMinigame.tscn", "res://Scenes/SeatingArrangementMinigame.tscn", "res://Scenes/DriveToBakeriesMinigame.tscn"]
 var whichBroomDoesWhat = [-1, -1, -1, -1, -1] #0 = both, 1 = nic, 2 = chauntal
 var minigameComplete = [0, 0, 0, 0, 0]
 

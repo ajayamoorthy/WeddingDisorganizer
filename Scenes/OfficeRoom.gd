@@ -25,27 +25,7 @@ var current_scene = null;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	trigger_minigame(minigames[minigames.size() - 1]);
-	#pass # Replace with function body.
-
-func trigger_minigame(whichMinigame):
-	var new_scene = load(minigames[whichMinigame]).instance();
-	
-	if new_scene.is_inside_tree():
-		return
-		
-	if current_scene and current_scene.is_inside_tree():
-		add_child_below_node(new_scene, current_scene);
-		remove_child(current_scene);
-	else:
-		add_child(new_scene);
-		
-	current_scene = new_scene;
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+	pass
 
 func _on_ContractConfirmed_pressed():
-	trigger_minigame(minigames[minigames.size() - 3]);
+	Global.goto_scene(Global.minigames[5])
