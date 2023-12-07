@@ -1,0 +1,422 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 12
+syntax_version = 2
+raw_text = "~ start_node
+Chauntal: Hi there! It is great to finally meet you face-to-face!
+ -  Likewise.
+ -  It's a pleasure!
+Nic: Heh. I don't know whether to hug you or shake your hand.
+ -  I am confident we'll be hugging in time for your big day!
+ -  Tell you what, lets stick to shaking hands for today.
+Chauntal: So where do we start?
+ -  Well, if you have the time I'd love to get to know you both a little better.  => introductions
+ -  First up, signing this standard contract. And then we start the wedding planning!  => contract_info  
+
+~ introductions
+Chauntal: We cleared our schedule at least for the next few hours so we're very much free to talk. Hello again! I am very pleased to make your acquaintance! As you know, my name is Chauntal Turner. I teach Math, more specifically algebra, to seventh graders at George Washington Middle School in the city. Nic and I have been together for quite some time now...what would you say Nic? 7? 8? Years. 
+Nic: Oh stop it! We've been friends for, like, forever. But ONE of us didn't realize they had feelings for the other one until senior year of high school.
+ -  Awesome. It was great to learn more about you both. Next up on the agenda, we need to go over this Contract before we start wedding planning. => contract_info
+ -  Haha. You guys are so cute together. Anything else? Hobbies? Favorite Vacation spot?
+Nic: Oh I got this one! Best vacation was hands down our trip to the Bahamas two years ago.
+Chauntal: Nic...I don't...
+Nic: No honestly, we went on a cruise and the damn boat decided it didn't like floating anymore. Our week on the beach turned into a month in a tropical trap. 
+ -  Oh I'm so sorry!
+ -  Really that was your best trip?
+Nic: It's all good. See, the best part of anything is being with this one. 
+Chauntal: Aww, babe...
+ -  Aww you two are so cute together. This will be a really fun wedding to plan! Next up on the agenda, we need to go over this Contract before we start wedding planning. => contract_info
+ -  What a Vacation! Tell me about your favorite date!
+Chauntal: I think their answser would be our first date in the park five days before prom. I had just told them that I had no desire to actually attend the dance. This one over here told me that it was because I didn't like my date. And then, next thing I knew, my best friend and I were kissing. 
+Nic: Yeah...I'm just smooth like that.-Wait then what's your favorite?
+Chauntal: Well if I had to pick...the time we went to that art studio
+Nic: AND THE INSTRUCTOR KNOCKED OVER THE BUCKET OF PAINT ONTO THE MODEL
+Chauntal: AND THE MODEL ROLLED AROUND ON THE CANVAS
+Nic: AND THEN LISA TRIPPED OVER THE MODEL
+Both: THEY MADE A CRIME SCENE ART PIECE!!!
+ -  I can only imagine what that looked like, my god. You guys are such a delight! Next up on the agenda, we need to go over this Contract before we start wedding planning. => contract_info
+
+~ contract_info
+Chauntal: So what are the basic terms of the contract?
+ -  \"To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\" 
+ -  \"The contract you have is quite standard. Effectively, the funds for your wedding will be moved into a joint account with our company. The funds will be allocated depending on the plans and schedule we will be drafting shortly. It also includes clauses for such things as surprise expenses or scheduling set backs. If there are any bumps in the road, this contract allows me to handle it without your approval. Although every decision will of course be made with you in mind, our policy is to help you avoid the stress of planning this event. Thus, we try to plan it in a way that is very, hands-off for you two. A few more notes on the contract and some of the fine print...\"
+ -  \"Nothing to worry about really. Just some standard wedding planning stuff.\"
+		Nic: Dude, we aren't signing anything until we know what its for…
+		- \"Right. Sorry. To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\" 
+Nic: Happy to be official!
+Chauntal: So what's next on the agenda?
+- \"Let's budget and set the schedule!\" => END
+
+"
+errors = [  ]
+titles = {
+"contract_info": "35",
+"introductions": "12",
+"start_node": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "start_node",
+"type": "title"
+},
+"1": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "2",
+"replacements": [  ],
+"text": "Hi there! It is great to finally meet you face-to-face!",
+"translation_key": "Hi there! It is great to finally meet you face-to-face!",
+"type": "dialogue"
+},
+"11": {
+"next_id": "12",
+"text": "introductions",
+"type": "title"
+},
+"12": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "13",
+"replacements": [  ],
+"text": "We cleared our schedule at least for the next few hours so we're very much free to talk. Hello again! I am very pleased to make your acquaintance! As you know, my name is Chauntal Turner. I teach Math, more specifically algebra, to seventh graders at George Washington Middle School in the city. Nic and I have been together for quite some time now...what would you say Nic? 7? 8? Years.",
+"translation_key": "We cleared our schedule at least for the next few hours so we're very much free to talk. Hello again! I am very pleased to make your acquaintance! As you know, my name is Chauntal Turner. I teach Math, more specifically algebra, to seventh graders at George Washington Middle School in the city. Nic and I have been together for quite some time now...what would you say Nic? 7? 8? Years.",
+"type": "dialogue"
+},
+"13": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "14",
+"replacements": [  ],
+"text": "Oh stop it! We've been friends for, like, forever. But ONE of us didn't realize they had feelings for the other one until senior year of high school.",
+"translation_key": "Oh stop it! We've been friends for, like, forever. But ONE of us didn't realize they had feelings for the other one until senior year of high school.",
+"type": "dialogue"
+},
+"14": {
+"next_id": "35",
+"next_id_after": "16",
+"replacements": [  ],
+"responses": PoolStringArray( "14", "15" ),
+"text": "Awesome. It was great to learn more about you both. Next up on the agenda, we need to go over this Contract before we start wedding planning.",
+"translation_key": "Awesome. It was great to learn more about you both. Next up on the agenda, we need to go over this Contract before we start wedding planning.",
+"type": "response"
+},
+"15": {
+"next_id": "16",
+"next_id_after": "16",
+"replacements": [  ],
+"text": "Haha. You guys are so cute together. Anything else? Hobbies? Favorite Vacation spot?",
+"translation_key": "Haha. You guys are so cute together. Anything else? Hobbies? Favorite Vacation spot?",
+"type": "response"
+},
+"16": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "17",
+"replacements": [  ],
+"text": "Oh I got this one! Best vacation was hands down our trip to the Bahamas two years ago.",
+"translation_key": "Oh I got this one! Best vacation was hands down our trip to the Bahamas two years ago.",
+"type": "dialogue"
+},
+"17": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "18",
+"replacements": [  ],
+"text": "Nic...I don't...",
+"translation_key": "Nic...I don't...",
+"type": "dialogue"
+},
+"18": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "19",
+"replacements": [  ],
+"text": "No honestly, we went on a cruise and the damn boat decided it didn't like floating anymore. Our week on the beach turned into a month in a tropical trap.",
+"translation_key": "No honestly, we went on a cruise and the damn boat decided it didn't like floating anymore. Our week on the beach turned into a month in a tropical trap.",
+"type": "dialogue"
+},
+"19": {
+"next_id": "21",
+"next_id_after": "21",
+"replacements": [  ],
+"responses": PoolStringArray( "19", "20" ),
+"text": "Oh I'm so sorry!",
+"translation_key": "Oh I'm so sorry!",
+"type": "response"
+},
+"2": {
+"next_id": "4",
+"next_id_after": "4",
+"replacements": [  ],
+"responses": PoolStringArray( "2", "3" ),
+"text": "Likewise.",
+"translation_key": "Likewise.",
+"type": "response"
+},
+"20": {
+"next_id": "21",
+"next_id_after": "21",
+"replacements": [  ],
+"text": "Really that was your best trip?",
+"translation_key": "Really that was your best trip?",
+"type": "response"
+},
+"21": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "22",
+"replacements": [  ],
+"text": "It's all good. See, the best part of anything is being with this one.",
+"translation_key": "It's all good. See, the best part of anything is being with this one.",
+"type": "dialogue"
+},
+"22": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "23",
+"replacements": [  ],
+"text": "Aww, babe...",
+"translation_key": "Aww, babe...",
+"type": "dialogue"
+},
+"23": {
+"next_id": "35",
+"next_id_after": "25",
+"replacements": [  ],
+"responses": PoolStringArray( "23", "24" ),
+"text": "Aww you two are so cute together. This will be a really fun wedding to plan! Next up on the agenda, we need to go over this Contract before we start wedding planning.",
+"translation_key": "Aww you two are so cute together. This will be a really fun wedding to plan! Next up on the agenda, we need to go over this Contract before we start wedding planning.",
+"type": "response"
+},
+"24": {
+"next_id": "25",
+"next_id_after": "25",
+"replacements": [  ],
+"text": "What a Vacation! Tell me about your favorite date!",
+"translation_key": "What a Vacation! Tell me about your favorite date!",
+"type": "response"
+},
+"25": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "26",
+"replacements": [  ],
+"text": "I think their answser would be our first date in the park five days before prom. I had just told them that I had no desire to actually attend the dance. This one over here told me that it was because I didn't like my date. And then, next thing I knew, my best friend and I were kissing.",
+"translation_key": "I think their answser would be our first date in the park five days before prom. I had just told them that I had no desire to actually attend the dance. This one over here told me that it was because I didn't like my date. And then, next thing I knew, my best friend and I were kissing.",
+"type": "dialogue"
+},
+"26": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "27",
+"replacements": [  ],
+"text": "Yeah...I'm just smooth like that.-Wait then what's your favorite?",
+"translation_key": "Yeah...I'm just smooth like that.-Wait then what's your favorite?",
+"type": "dialogue"
+},
+"27": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "28",
+"replacements": [  ],
+"text": "Well if I had to pick...the time we went to that art studio",
+"translation_key": "Well if I had to pick...the time we went to that art studio",
+"type": "dialogue"
+},
+"28": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "29",
+"replacements": [  ],
+"text": "AND THE INSTRUCTOR KNOCKED OVER THE BUCKET OF PAINT ONTO THE MODEL",
+"translation_key": "AND THE INSTRUCTOR KNOCKED OVER THE BUCKET OF PAINT ONTO THE MODEL",
+"type": "dialogue"
+},
+"29": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "30",
+"replacements": [  ],
+"text": "AND THE MODEL ROLLED AROUND ON THE CANVAS",
+"translation_key": "AND THE MODEL ROLLED AROUND ON THE CANVAS",
+"type": "dialogue"
+},
+"3": {
+"next_id": "4",
+"next_id_after": "4",
+"replacements": [  ],
+"text": "It's a pleasure!",
+"translation_key": "It's a pleasure!",
+"type": "response"
+},
+"30": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "31",
+"replacements": [  ],
+"text": "AND THEN LISA TRIPPED OVER THE MODEL",
+"translation_key": "AND THEN LISA TRIPPED OVER THE MODEL",
+"type": "dialogue"
+},
+"31": {
+"character": "Both",
+"character_replacements": [  ],
+"next_id": "32",
+"replacements": [  ],
+"text": "THEY MADE A CRIME SCENE ART PIECE!!!",
+"translation_key": "THEY MADE A CRIME SCENE ART PIECE!!!",
+"type": "dialogue"
+},
+"32": {
+"next_id": "35",
+"next_id_after": "end!",
+"replacements": [  ],
+"responses": PoolStringArray( "32" ),
+"text": "I can only imagine what that looked like, my god. You guys are such a delight! Next up on the agenda, we need to go over this Contract before we start wedding planning.",
+"translation_key": "I can only imagine what that looked like, my god. You guys are such a delight! Next up on the agenda, we need to go over this Contract before we start wedding planning.",
+"type": "response"
+},
+"34": {
+"next_id": "35",
+"text": "contract_info",
+"type": "title"
+},
+"35": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "36",
+"replacements": [  ],
+"text": "So what are the basic terms of the contract?",
+"translation_key": "So what are the basic terms of the contract?",
+"type": "dialogue"
+},
+"36": {
+"next_id": "41",
+"next_id_after": "41",
+"replacements": [  ],
+"responses": PoolStringArray( "36", "37", "38" ),
+"text": "\"To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\"",
+"translation_key": "\"To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\"",
+"type": "response"
+},
+"37": {
+"next_id": "41",
+"next_id_after": "41",
+"replacements": [  ],
+"text": "\"The contract you have is quite standard. Effectively, the funds for your wedding will be moved into a joint account with our company. The funds will be allocated depending on the plans and schedule we will be drafting shortly. It also includes clauses for such things as surprise expenses or scheduling set backs. If there are any bumps in the road, this contract allows me to handle it without your approval. Although every decision will of course be made with you in mind, our policy is to help you avoid the stress of planning this event. Thus, we try to plan it in a way that is very, hands-off for you two. A few more notes on the contract and some of the fine print...\"",
+"translation_key": "\"The contract you have is quite standard. Effectively, the funds for your wedding will be moved into a joint account with our company. The funds will be allocated depending on the plans and schedule we will be drafting shortly. It also includes clauses for such things as surprise expenses or scheduling set backs. If there are any bumps in the road, this contract allows me to handle it without your approval. Although every decision will of course be made with you in mind, our policy is to help you avoid the stress of planning this event. Thus, we try to plan it in a way that is very, hands-off for you two. A few more notes on the contract and some of the fine print...\"",
+"type": "response"
+},
+"38": {
+"next_id": "39",
+"next_id_after": "41",
+"replacements": [  ],
+"text": "\"Nothing to worry about really. Just some standard wedding planning stuff.\"",
+"translation_key": "\"Nothing to worry about really. Just some standard wedding planning stuff.\"",
+"type": "response"
+},
+"39": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "40",
+"parent_id": "38",
+"replacements": [  ],
+"text": "Dude, we aren't signing anything until we know what its for…",
+"translation_key": "Dude, we aren't signing anything until we know what its for…",
+"type": "dialogue"
+},
+"4": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "5",
+"replacements": [  ],
+"text": "Heh. I don't know whether to hug you or shake your hand.",
+"translation_key": "Heh. I don't know whether to hug you or shake your hand.",
+"type": "dialogue"
+},
+"40": {
+"next_id": "41",
+"next_id_after": "41",
+"parent_id": "38",
+"replacements": [  ],
+"responses": PoolStringArray( "40" ),
+"text": "\"Right. Sorry. To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\"",
+"translation_key": "\"Right. Sorry. To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\"",
+"type": "response"
+},
+"41": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "42",
+"replacements": [  ],
+"text": "Happy to be official!",
+"translation_key": "Happy to be official!",
+"type": "dialogue"
+},
+"42": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "43",
+"replacements": [  ],
+"text": "So what's next on the agenda?",
+"translation_key": "So what's next on the agenda?",
+"type": "dialogue"
+},
+"43": {
+"next_id": "end",
+"next_id_after": "end!",
+"replacements": [  ],
+"responses": PoolStringArray( "43" ),
+"text": "\"Let's budget and set the schedule!\"",
+"translation_key": "\"Let's budget and set the schedule!\"",
+"type": "response"
+},
+"5": {
+"next_id": "7",
+"next_id_after": "7",
+"replacements": [  ],
+"responses": PoolStringArray( "5", "6" ),
+"text": "I am confident we'll be hugging in time for your big day!",
+"translation_key": "I am confident we'll be hugging in time for your big day!",
+"type": "response"
+},
+"6": {
+"next_id": "7",
+"next_id_after": "7",
+"replacements": [  ],
+"text": "Tell you what, lets stick to shaking hands for today.",
+"translation_key": "Tell you what, lets stick to shaking hands for today.",
+"type": "response"
+},
+"7": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "8",
+"replacements": [  ],
+"text": "So where do we start?",
+"translation_key": "So where do we start?",
+"type": "dialogue"
+},
+"8": {
+"next_id": "12",
+"next_id_after": "end!",
+"replacements": [  ],
+"responses": PoolStringArray( "8", "9" ),
+"text": "Well, if you have the time I'd love to get to know you both a little better.",
+"translation_key": "Well, if you have the time I'd love to get to know you both a little better.",
+"type": "response"
+},
+"9": {
+"next_id": "35",
+"next_id_after": "end!",
+"replacements": [  ],
+"text": "First up, signing this standard contract. And then we start the wedding planning!",
+"translation_key": "First up, signing this standard contract. And then we start the wedding planning!",
+"type": "response"
+}
+}
