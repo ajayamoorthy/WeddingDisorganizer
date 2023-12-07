@@ -28,4 +28,4 @@ func _ready():
 	pass
 
 func _on_ContractConfirmed_pressed():
-	Global.goto_scene(Global.minigames[5])
+	Global.goto_scene("res://Scenes/BudgetingMinigame.tscn")

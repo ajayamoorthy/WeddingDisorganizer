@@ -6,10 +6,20 @@
 script = ExtResource( 1 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 960.0
+margin_top = 540.0
+margin_right = 1085.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
 
 [node name="ContractConfirmed" type="Button" parent="VBoxContainer"]
 margin_right = 125.0
 margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Confirm Contract?"
+icon_align = 1
 
 [connection signal="pressed" from="VBoxContainer/ContractConfirmed" to="." method="_on_ContractConfirmed_pressed"]

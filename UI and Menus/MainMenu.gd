@@ -5,7 +5,8 @@ func _ready():
 	$VBoxContainer/StartButton.grab_focus()
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://Scenes/OfficeRoom.tscn")
+	#get_tree().change_scene("res://Scenes/OfficeRoom.tscn")
+	Global.goto_scene("res://Scenes/OfficeRoom.tscn")
 	
 func _on_Saves_pressed():
 	#get_tree().change_scene("res://Scenes/ [saves scene] ")
