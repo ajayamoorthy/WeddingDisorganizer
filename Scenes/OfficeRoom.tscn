@@ -1,25 +1,49 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/OfficeRoom.gd" type="Script" id=1]
+[ext_resource path="res://OfficeAssets/Asset_Office_Desk.png" type="Texture" id=2]
+[ext_resource path="res://OfficeAssets/Char_Chantel_Sprite.png" type="Texture" id=3]
+[ext_resource path="res://OfficeAssets/Char_Nic_Sprite.png" type="Texture" id=4]
+[ext_resource path="res://OfficeAssets/Asset_Office_Background_Temp.png" type="Texture" id=5]
 
 [node name="OfficeRoom" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="AssetOfficeBackgroundTemp" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 5 )
+
+[node name="CharChantelSprite" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 3 )
+
+[node name="CharNicSprite" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 4 )
+
+[node name="AssetOfficeDesk" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 2 )
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 960.0
-margin_top = 540.0
-margin_right = 1085.0
-margin_bottom = 560.0
+margin_left = 811.0
+margin_top = 483.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 339.0
+margin_bottom = 14.0
+text = "Please don't click this until the dialogue is complete!"
+
 [node name="ContractConfirmed" type="Button" parent="VBoxContainer"]
-margin_right = 125.0
-margin_bottom = 20.0
+margin_top = 18.0
+margin_right = 339.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Confirm Contract?"
+text = "Budget and Plan!"
 icon_align = 1
 
 [connection signal="pressed" from="VBoxContainer/ContractConfirmed" to="." method="_on_ContractConfirmed_pressed"]

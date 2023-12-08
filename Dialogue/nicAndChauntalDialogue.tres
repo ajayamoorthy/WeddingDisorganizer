@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 12
+resource_version = 14
 syntax_version = 2
 raw_text = "~ start_node
 Chauntal: Hi there! It is great to finally meet you face-to-face!
@@ -49,7 +49,8 @@ Chauntal: So what are the basic terms of the contract?
 		- \"Right. Sorry. To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\" 
 Nic: Happy to be official!
 Chauntal: So what's next on the agenda?
-- \"Let's budget and set the schedule!\" => END
+- \"Let's budget and set the schedule!\" 
+	set timeToBudget = true
 
 "
 errors = [  ]
@@ -368,13 +369,30 @@ lines = {
 "type": "dialogue"
 },
 "43": {
-"next_id": "end",
+"next_id": "44",
 "next_id_after": "end!",
 "replacements": [  ],
 "responses": PoolStringArray( "43" ),
 "text": "\"Let's budget and set the schedule!\"",
 "translation_key": "\"Let's budget and set the schedule!\"",
 "type": "response"
+},
+"44": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "timeToBudget"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "end!",
+"parent_id": "43",
+"type": "mutation"
 },
 "5": {
 "next_id": "7",

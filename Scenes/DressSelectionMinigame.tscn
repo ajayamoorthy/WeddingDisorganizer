@@ -1,3 +1,8 @@
 [gd_scene format=2]
 
 [node name="DressSelectionMinigame" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.843137, 0.639216, 0.819608, 1 )

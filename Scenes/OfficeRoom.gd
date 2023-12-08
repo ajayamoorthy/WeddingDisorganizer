@@ -27,6 +27,7 @@ var localBudget;
 func _ready():
 	var resource = preload("res://Dialogue/nicAndChauntalDialogue.tres")
 	DialogueManager.show_example_dialogue_balloon("start_node", resource)
+	
 
 func _on_ContractConfirmed_pressed():
 	Global.goto_scene("res://Scenes/BudgetingMinigame.tscn")

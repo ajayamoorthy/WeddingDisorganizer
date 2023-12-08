@@ -13,6 +13,13 @@ var minigameOrder = ["res://Scenes/RhythmMinigame.tscn", "res://Scenes/MazeMinig
 var whichBroomDoesWhat = [-1, -1, -1, -1, -1] #0 = both, 1 = nic, 2 = chauntal
 var minigameComplete = [0, 0, 0, 0, 0]
 
+var colorPalette; 
+var broom1Fit; 
+var broom2Fit; 
+var floristSelection; 
+var bakerSelection; 
+var seatingHarmony; 
+
 
 var current_scene = null
 

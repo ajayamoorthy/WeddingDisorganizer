@@ -1,6 +1,7 @@
 extends Node
 
 #var resource = preload("res://Dialogue/nicAndChauntalDialogue.tres")
+var timeToBudget = false
 
 func show_dialogue(title: String, resource: DialogueResource = null) -> void:
 	#DialogueManager.show_example_dialogue_balloon(resource)
