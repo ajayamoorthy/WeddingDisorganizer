@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 14
+resource_version = 15
 syntax_version = 2
 raw_text = "~ start_node
 Chauntal: Hi there! It is great to finally meet you face-to-face!
