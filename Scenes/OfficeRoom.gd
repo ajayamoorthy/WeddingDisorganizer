@@ -25,10 +25,18 @@ var localBudget;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var resource = preload("res://Dialogue/nicAndChauntalDialogue.tres")
-	DialogueManager.show_example_dialogue_balloon("start_node", resource)
+	if Global.currentPosition == 0:
+		var resource = preload("res://Dialogue/nicAndChauntalDialogue.tres")
+		DialogueManager.show_example_dialogue_balloon("start_node", resource)
+	elif Global.currentPosition == 1:
+		var resource = preload("res://Dialogue/nicAndChauntalDialogue.tres")
+		DialogueManager.show_example_dialogue_balloon("pre_wedding", resource)
 	
 
 func _on_ContractConfirmed_pressed():
 	Global.goto_scene("res://Scenes/BudgetingMinigame.tscn")
 	
+
+
+func _on_GetMarried_pressed():
+	get_tree().quit()

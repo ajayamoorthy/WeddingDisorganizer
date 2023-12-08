@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 15
+resource_version = 17
 syntax_version = 2
 raw_text = "~ start_node
 Chauntal: Hi there! It is great to finally meet you face-to-face!
@@ -47,16 +47,28 @@ Chauntal: So what are the basic terms of the contract?
  -  \"Nothing to worry about really. Just some standard wedding planning stuff.\"
 		Nic: Dude, we aren't signing anything until we know what its for…
 		- \"Right. Sorry. To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\" 
-Nic: Happy to be official!
+Nic: I'm excited to start!
 Chauntal: So what's next on the agenda?
 - \"Let's budget and set the schedule!\" 
 	set timeToBudget = true
 
-"
+~ pre_wedding
+Chauntal: Phew! That was a lot of work!
+Nic: It definitely didn't come without it's fair share of struggles that's for sure...
+ - \"Wedding planning is a lot more difficult than you think!\"
+ - \"Don't worry, I did a great job.\"
+		Nic: Don't you mean we did a great job?
+		- \"Yes, yes, of course!\"
+Chauntal: Anyways, I'm just ready to get married to you Nic.
+Nic: Me too babe, no matter what happens at the wedding, we still have each other.
+Both: Thank you so much for your help!
+ - \"Of course! Ah, young love.\"
+ - \"You're very welcome.\""
 errors = [  ]
 titles = {
 "contract_info": "35",
 "introductions": "12",
+"pre_wedding": "47",
 "start_node": "1"
 }
 lines = {
@@ -355,8 +367,8 @@ lines = {
 "character_replacements": [  ],
 "next_id": "42",
 "replacements": [  ],
-"text": "Happy to be official!",
-"translation_key": "Happy to be official!",
+"text": "I'm excited to start!",
+"translation_key": "I'm excited to start!",
 "type": "dialogue"
 },
 "42": {
@@ -394,6 +406,38 @@ lines = {
 "parent_id": "43",
 "type": "mutation"
 },
+"46": {
+"next_id": "47",
+"text": "pre_wedding",
+"type": "title"
+},
+"47": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "48",
+"replacements": [  ],
+"text": "Phew! That was a lot of work!",
+"translation_key": "Phew! That was a lot of work!",
+"type": "dialogue"
+},
+"48": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "49",
+"replacements": [  ],
+"text": "It definitely didn't come without it's fair share of struggles that's for sure...",
+"translation_key": "It definitely didn't come without it's fair share of struggles that's for sure...",
+"type": "dialogue"
+},
+"49": {
+"next_id": "53",
+"next_id_after": "53",
+"replacements": [  ],
+"responses": PoolStringArray( "49", "50" ),
+"text": "\"Wedding planning is a lot more difficult than you think!\"",
+"translation_key": "\"Wedding planning is a lot more difficult than you think!\"",
+"type": "response"
+},
 "5": {
 "next_id": "7",
 "next_id_after": "7",
@@ -401,6 +445,78 @@ lines = {
 "responses": PoolStringArray( "5", "6" ),
 "text": "I am confident we'll be hugging in time for your big day!",
 "translation_key": "I am confident we'll be hugging in time for your big day!",
+"type": "response"
+},
+"50": {
+"next_id": "51",
+"next_id_after": "53",
+"replacements": [  ],
+"text": "\"Don't worry, I did a great job.\"",
+"translation_key": "\"Don't worry, I did a great job.\"",
+"type": "response"
+},
+"51": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "52",
+"parent_id": "50",
+"replacements": [  ],
+"text": "Don't you mean we did a great job?",
+"translation_key": "Don't you mean we did a great job?",
+"type": "dialogue"
+},
+"52": {
+"next_id": "53",
+"next_id_after": "53",
+"parent_id": "50",
+"replacements": [  ],
+"responses": PoolStringArray( "52" ),
+"text": "\"Yes, yes, of course!\"",
+"translation_key": "\"Yes, yes, of course!\"",
+"type": "response"
+},
+"53": {
+"character": "Chauntal",
+"character_replacements": [  ],
+"next_id": "54",
+"replacements": [  ],
+"text": "Anyways, I'm just ready to get married to you Nic.",
+"translation_key": "Anyways, I'm just ready to get married to you Nic.",
+"type": "dialogue"
+},
+"54": {
+"character": "Nic",
+"character_replacements": [  ],
+"next_id": "55",
+"replacements": [  ],
+"text": "Me too babe, no matter what happens at the wedding, we still have each other.",
+"translation_key": "Me too babe, no matter what happens at the wedding, we still have each other.",
+"type": "dialogue"
+},
+"55": {
+"character": "Both",
+"character_replacements": [  ],
+"next_id": "56",
+"replacements": [  ],
+"text": "Thank you so much for your help!",
+"translation_key": "Thank you so much for your help!",
+"type": "dialogue"
+},
+"56": {
+"next_id": "end!",
+"next_id_after": "end!",
+"replacements": [  ],
+"responses": PoolStringArray( "56", "57" ),
+"text": "\"Of course! Ah, young love.\"",
+"translation_key": "\"Of course! Ah, young love.\"",
+"type": "response"
+},
+"57": {
+"next_id": "",
+"next_id_after": "end!",
+"replacements": [  ],
+"text": "\"You're very welcome.\"",
+"translation_key": "\"You're very welcome.\"",
 "type": "response"
 },
 "6": {

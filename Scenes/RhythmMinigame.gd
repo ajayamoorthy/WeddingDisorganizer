@@ -1,9 +1,5 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var theme = null
 var b1satisfactionEffect = 0
 var b2satisfactionEffect = 0
@@ -32,9 +28,10 @@ func _on_aquaticTheme_pressed():
 func _on_confirmButton_pressed():
 	Global.updateSatisfaction("nic", b1satisfactionEffect)
 	Global.updateSatisfaction("chauntal", b2satisfactionEffect)
+	Global.theme = theme
 	
 	#debug
-	print("Theme: ", theme)
+	print("Theme: ", Global.theme)
 	print("Nic's Satisfaction: ", Global.broom1satisfaction)
 	print("Chauntal's Satisfaction: ", Global.broom2satisfaction)
 	print()
