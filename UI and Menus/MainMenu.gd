@@ -1,5 +1,14 @@
 extends Control
 
+# score
+var score = 0
+
+# sensor
+var sensor_AL = 0
+var sensor_AD = 0
+var sensor_AU = 0
+var sensor_AR = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass #$VBoxContainer/StartButton.grab_focus()
