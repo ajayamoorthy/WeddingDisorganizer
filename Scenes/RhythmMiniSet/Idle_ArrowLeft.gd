@@ -27,3 +27,5 @@ func _on_Idle_ArrowLeft_area_shape_entered(area_rid, area, area_shape_index, loc
 func _on_Idle_ArrowLeft_area_shape_exited(area_rid, area, area_shape_index, local_shape_index):
 	sensor = 0
 	Global.sensor_AL = 0
+
+

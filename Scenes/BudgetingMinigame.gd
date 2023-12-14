@@ -38,7 +38,7 @@ func _on_Button_pressed():
 	print("Chauntal's Satisfaction: ", Global.broom2satisfaction)
 	print()
 	
-	Global.goto_scene("res://Scenes/RhythmMinigame.tscn")
+	Global.goto_scene("res://Scenes/RhythmMiniSet/RhythmMini.tscn")
 
 
 

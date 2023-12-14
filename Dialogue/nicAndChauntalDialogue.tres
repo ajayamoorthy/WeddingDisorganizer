@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 17
+resource_version = 18
 syntax_version = 2
 raw_text = "~ start_node
 Chauntal: Hi there! It is great to finally meet you face-to-face!
@@ -27,11 +27,11 @@ Chauntal: Nic...I don't...
 Nic: No honestly, we went on a cruise and the damn boat decided it didn't like floating anymore. Our week on the beach turned into a month in a tropical trap. 
  -  Oh I'm so sorry!
  -  Really that was your best trip?
-Nic: It's all good. See, the best part of anything is being with this one. 
+Nic: Its all good. See, the best part of anything is being with this one. 
 Chauntal: Aww, babe...
  -  Aww you two are so cute together. This will be a really fun wedding to plan! Next up on the agenda, we need to go over this Contract before we start wedding planning. => contract_info
  -  What a Vacation! Tell me about your favorite date!
-Chauntal: I think their answser would be our first date in the park five days before prom. I had just told them that I had no desire to actually attend the dance. This one over here told me that it was because I didn't like my date. And then, next thing I knew, my best friend and I were kissing. 
+Chauntal: I think their answer would be our first date in the park five days before prom. I had just told them that I had no desire to actually attend the dance. This one over here told me that it was because I didn't like my date. And then, next thing I knew, my best friend and I were kissing. 
 Nic: Yeah...I'm just smooth like that.-Wait then what's your favorite?
 Chauntal: Well if I had to pick...the time we went to that art studio
 Nic: AND THE INSTRUCTOR KNOCKED OVER THE BUCKET OF PAINT ONTO THE MODEL
@@ -45,7 +45,7 @@ Chauntal: So what are the basic terms of the contract?
  -  \"To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\" 
  -  \"The contract you have is quite standard. Effectively, the funds for your wedding will be moved into a joint account with our company. The funds will be allocated depending on the plans and schedule we will be drafting shortly. It also includes clauses for such things as surprise expenses or scheduling set backs. If there are any bumps in the road, this contract allows me to handle it without your approval. Although every decision will of course be made with you in mind, our policy is to help you avoid the stress of planning this event. Thus, we try to plan it in a way that is very, hands-off for you two. A few more notes on the contract and some of the fine print...\"
  -  \"Nothing to worry about really. Just some standard wedding planning stuff.\"
-		Nic: Dude, we aren't signing anything until we know what its for…
+		Nic: Dude, we aren't signing anything until we know what it's for…
 		- \"Right. Sorry. To put it simply, your budget and most wedding decisions will be made entirely by the agency. It is our policy to take on as much of the stress of the event as possible, as such your role will be pretty hands off. After we sign the contract, I'll work with you two to design a rough schedule and a budget plan which will guide my planning process until the event.\" 
 Nic: I'm excited to start!
 Chauntal: So what's next on the agenda?
@@ -54,7 +54,7 @@ Chauntal: So what's next on the agenda?
 
 ~ pre_wedding
 Chauntal: Phew! That was a lot of work!
-Nic: It definitely didn't come without it's fair share of struggles that's for sure...
+Nic: It definitely didn't come without its fair share of struggles that's for sure...
  - \"Wedding planning is a lot more difficult than you think!\"
  - \"Don't worry, I did a great job.\"
 		Nic: Don't you mean we did a great job?
@@ -184,8 +184,8 @@ lines = {
 "character_replacements": [  ],
 "next_id": "22",
 "replacements": [  ],
-"text": "It's all good. See, the best part of anything is being with this one.",
-"translation_key": "It's all good. See, the best part of anything is being with this one.",
+"text": "Its all good. See, the best part of anything is being with this one.",
+"translation_key": "Its all good. See, the best part of anything is being with this one.",
 "type": "dialogue"
 },
 "22": {
@@ -219,8 +219,8 @@ lines = {
 "character_replacements": [  ],
 "next_id": "26",
 "replacements": [  ],
-"text": "I think their answser would be our first date in the park five days before prom. I had just told them that I had no desire to actually attend the dance. This one over here told me that it was because I didn't like my date. And then, next thing I knew, my best friend and I were kissing.",
-"translation_key": "I think their answser would be our first date in the park five days before prom. I had just told them that I had no desire to actually attend the dance. This one over here told me that it was because I didn't like my date. And then, next thing I knew, my best friend and I were kissing.",
+"text": "I think their answer would be our first date in the park five days before prom. I had just told them that I had no desire to actually attend the dance. This one over here told me that it was because I didn't like my date. And then, next thing I knew, my best friend and I were kissing.",
+"translation_key": "I think their answer would be our first date in the park five days before prom. I had just told them that I had no desire to actually attend the dance. This one over here told me that it was because I didn't like my date. And then, next thing I knew, my best friend and I were kissing.",
 "type": "dialogue"
 },
 "26": {
@@ -339,8 +339,8 @@ lines = {
 "next_id": "40",
 "parent_id": "38",
 "replacements": [  ],
-"text": "Dude, we aren't signing anything until we know what its for…",
-"translation_key": "Dude, we aren't signing anything until we know what its for…",
+"text": "Dude, we aren't signing anything until we know what it's for…",
+"translation_key": "Dude, we aren't signing anything until we know what it's for…",
 "type": "dialogue"
 },
 "4": {
@@ -425,8 +425,8 @@ lines = {
 "character_replacements": [  ],
 "next_id": "49",
 "replacements": [  ],
-"text": "It definitely didn't come without it's fair share of struggles that's for sure...",
-"translation_key": "It definitely didn't come without it's fair share of struggles that's for sure...",
+"text": "It definitely didn't come without its fair share of struggles that's for sure...",
+"translation_key": "It definitely didn't come without its fair share of struggles that's for sure...",
 "type": "dialogue"
 },
 "49": {

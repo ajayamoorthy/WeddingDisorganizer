@@ -6,10 +6,10 @@ var budget;
 var broom1satisfaction = 0;
 var broom2satisfaction = 0;
 
-var minigames = ["res://Scenes/MazeMinigameLevel1.tscn", "res://Scenes/RhythmMinigame.tscn", "res://Scenes/DressSelectionMinigame.tscn", "res://Scenes/DriveToBakeriesMinigame.tscn", "res://Scenes/SeatingArrangementMinigame.tscn", "res://Scenes/BudgetingMinigame.tscn", "res://Scenes/PlanningMinigame.tscn", "res://Scenes/OfficeRoom.tscn"] #which scenes
+var minigames = ["res://Scenes/MazeMinigameLevel1.tscn", "res://Scenes/RhythmMiniSet/RhythmMini.tscn", "res://Scenes/RhythmMinigame.tscn", "res://Scenes/DressSelectionMinigame.tscn", "res://Scenes/DriveToBakeriesMinigame.tscn", "res://Scenes/SeatingArrangementMinigame.tscn", "res://Scenes/BudgetingMinigame.tscn", "res://Scenes/PlanningMinigame.tscn", "res://Scenes/OfficeRoom.tscn"] #which scenes
 
 #hardcoded for now or else i will kms
-var minigameOrder = ["res://Scenes/RhythmMinigame.tscn", "res://Scenes/MazeMinigameLevel1.tscn", "res://Scenes/DressSelectionMinigame.tscn", "res://Scenes/SeatingArrangementMinigame.tscn", "res://Scenes/DriveToBakeriesMinigame.tscn"]
+var minigameOrder = ["res://Scenes/RhythmMiniSet/RhythmMini.tscn","res://Scenes/RhythmMinigame.tscn", "res://Scenes/MazeMinigameLevel1.tscn", "res://Scenes/DressSelectionMinigame.tscn", "res://Scenes/SeatingArrangementMinigame.tscn", "res://Scenes/DriveToBakeriesMinigame.tscn"]
 var whichBroomDoesWhat = [-1, -1, -1, -1, -1] #0 = both, 1 = nic, 2 = chauntal
 var minigameComplete = [0, 0, 0, 0, 0]
 
@@ -25,6 +25,14 @@ var seatingHarmony;
 
 
 var current_scene = null
+
+# sensors/score for rhythmgame
+var score = 0
+var sensor_AL = 0
+var sensor_AD = 0
+var sensor_AU = 0
+var sensor_AR = 0
+
 
 func _ready():
 	var root = get_tree().root

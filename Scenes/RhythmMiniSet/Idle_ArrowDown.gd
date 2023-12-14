@@ -29,3 +29,4 @@ func _on_Idle_ArrowDown_area_shape_entered(area_rid, area, area_shape_index, loc
 func _on_Idle_ArrowDown_area_shape_exited(area_rid, area, area_shape_index, local_shape_index):
 	sensor = 0
 	Global.sensor_AD = 0
+
