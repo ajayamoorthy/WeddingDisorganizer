@@ -1,3 +1,76 @@
-[gd_scene format=2]
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/RhythmMiniSet/Idle_ArrowRight.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/RhythmMiniSet/Idle_ArrowDown.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/RhythmMiniSet/Idle_ArrowLeft.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/RhythmMiniSet/Idle_ArrowUp.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/RhythmMiniSet/RhythmMini.gd" type="Script" id=5]
+[ext_resource path="res://milkuFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://OfficeAssets/Asset_Desk_RythmGame.PNG" type="Texture" id=7]
 
 [node name="RhythmMini" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Create" type="Node2D" parent="."]
+
+[node name="Position2D_AL" type="Position2D" parent="Create"]
+position = Vector2( 872, 648 )
+
+[node name="Position2D_AD" type="Position2D" parent="Create"]
+position = Vector2( 936, 648 )
+
+[node name="Position2D_AU" type="Position2D" parent="Create"]
+position = Vector2( 1064, 648 )
+
+[node name="Position2D_AR" type="Position2D" parent="Create"]
+position = Vector2( 1000, 648 )
+
+[node name="Idle_ArrowLeft" parent="." instance=ExtResource( 3 )]
+position = Vector2( 872, 264 )
+z_index = 1
+
+[node name="Idle_ArrowDown" parent="." instance=ExtResource( 2 )]
+position = Vector2( 936, 264 )
+z_index = 1
+
+[node name="Idle_ArrowUp" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1000, 264 )
+
+[node name="Idle_ArrowRight" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1064, 264 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 360.0
+margin_top = 8.0
+margin_right = 1576.0
+margin_bottom = 176.0
+custom_fonts/font = ExtResource( 6 )
+text = "25 Chances to contact  designers for a theme:"
+align = 1
+
+[node name="Score" type="Node2D" parent="."]
+position = Vector2( 360, 8 )
+
+[node name="Label" type="Label" parent="Score"]
+margin_top = 72.0
+margin_right = 1216.0
+margin_bottom = 160.0
+custom_fonts/font = ExtResource( 6 )
+text = "000"
+align = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_right = 1920.0
+margin_bottom = 1144.0
+color = Color( 0.392157, 0.243137, 0.490196, 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 960, 528 )
+scale = Vector2( 1, 1.04074 )
+texture = ExtResource( 7 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
