@@ -1,10 +1,10 @@
 extends Node
 
 
-const AL = preload("res://Scenes/Move_ArrpowLeft.tscn")
-const AD = preload("res://Scenes/Move_ArrowDown.tscn")
-const AU = preload("res://Scenes/Move_ArrowUp.tscn")
-const AR = preload("res://Scenes/Move_ArrowRight.tscn")
+const AL = preload("res://Scenes/RhythmMiniSet/Move_ArrowLeft.gd")
+const AD = preload("res://Scenes/RhythmMiniSet/Move_ArrowDown.gd")
+const AU = preload("res://Scenes/RhythmMiniSet/Move_ArrowUp.gd")
+const AR = preload("res://Scenes/RhythmMiniSet/Move_ArrowRight.gd")
 
 var random = 0
 var RNG = RandomNumberGenerator.new()
