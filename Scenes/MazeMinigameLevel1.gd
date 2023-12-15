@@ -1,9 +1,7 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var global_script = preload("res://Global.gd")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,9 +10,14 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass
+		#Global.goto_scene("res://Scenes/OfficeRoom.tscn")
+		
 
 
-func _on_BackButton_pressed():
-	get_tree().change_scene("res://UI and Menus/MainMenu.tscn")
+
+
+
+func _on_Button_pressed():
+	Global.goto_scene("res://Scenes/OfficeRoom.tscn")

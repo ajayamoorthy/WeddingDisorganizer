@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 18
+resource_version = 20
 syntax_version = 2
 raw_text = "~ start_node
 Chauntal: Hi there! It is great to finally meet you face-to-face!
@@ -63,7 +63,8 @@ Chauntal: Anyways, I'm just ready to get married to you Nic.
 Nic: Me too babe, no matter what happens at the wedding, we still have each other.
 Both: Thank you so much for your help!
  - \"Of course! Ah, young love.\"
- - \"You're very welcome.\""
+ - \"You're very welcome.\"
+	set timeToMarry = true"
 errors = [  ]
 titles = {
 "contract_info": "35",
@@ -512,12 +513,29 @@ lines = {
 "type": "response"
 },
 "57": {
-"next_id": "",
+"next_id": "58",
 "next_id_after": "end!",
 "replacements": [  ],
 "text": "\"You're very welcome.\"",
 "translation_key": "\"You're very welcome.\"",
 "type": "response"
+},
+"58": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "timeToMarry"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "end!",
+"parent_id": "57",
+"type": "mutation"
 },
 "6": {
 "next_id": "7",

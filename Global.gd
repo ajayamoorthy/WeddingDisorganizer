@@ -15,6 +15,8 @@ var minigameComplete = [0, 0, 0, 0, 0]
 
 var currentPosition = 0
 
+var flowerCount = 0
+
 var theme;
 var colorPalette; 
 var broom1Fit; 
@@ -72,3 +74,11 @@ func updateSatisfaction(broom, amount):
 		broom1satisfaction += amount
 	elif broom == "chauntal":
 		broom2satisfaction += amount
+		
+var button_clicked = false
+
+func set_button_clicked_state(state):
+	button_clicked = state
+
+func get_button_clicked_state():
+	return button_clicked

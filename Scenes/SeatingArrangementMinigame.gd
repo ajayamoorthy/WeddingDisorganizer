@@ -39,4 +39,5 @@ func _on_Button_pressed():
 	print("Chauntal's Satisfaction: ", Global.broom2satisfaction)
 	print()
 	
-	Global.goto_scene("res://Scenes/OfficeRoom.tscn")
+	#Global.goto_scene("res://Scenes/OfficeRoom.tscn")
+	Global.goto_scene("res://Scenes/MazeMinigameLevel1.tscn")
