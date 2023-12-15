@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI and Menus/satisfactionBar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Milku.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI and Menus/nicSatisfactionBar.gd" type="Script" id=3]
+[ext_resource path="res://UI and Menus/satisfactionOverlay.gd" type="Script" id=4]
+[ext_resource path="res://UI and Menus/chauntalSatisfactionBar.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -920.0
+script = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+margin_right = 1920.0
+margin_bottom = 160.0
+color = Color( 0.376471, 0.286275, 0.498039, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 1870.0
+margin_bottom = 160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AllElements" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+margin_right = 1820.0
+margin_bottom = 110.0
+custom_constants/separation = 750
+
+[node name="NicSatisfaction" type="VBoxContainer" parent="CanvasLayer/MarginContainer/AllElements"]
+margin_right = 535.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="TextureProgress" parent="CanvasLayer/MarginContainer/AllElements/NicSatisfaction" instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 535.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/AllElements/NicSatisfaction"]
+margin_top = 55.0
+margin_right = 535.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Nic's Satisfaction"
+align = 1
+valign = 1
+
+[node name="ChauntalSatisfaction" type="VBoxContainer" parent="CanvasLayer/MarginContainer/AllElements"]
+margin_left = 1285.0
+margin_right = 1820.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="TextureProgress" parent="CanvasLayer/MarginContainer/AllElements/ChauntalSatisfaction" instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 535.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/AllElements/ChauntalSatisfaction"]
+margin_top = 55.0
+margin_right = 535.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Chauntal's Satisfaction"
+align = 1
+valign = 1
+
+[connection signal="value_changed" from="CanvasLayer/MarginContainer/AllElements/NicSatisfaction/TextureProgress" to="CanvasLayer/MarginContainer/AllElements/NicSatisfaction/TextureProgress" method="_on_TextureProgress_value_changed"]

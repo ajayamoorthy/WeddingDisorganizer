@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Milku.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/DriveToBakeriesMinigame.gd" type="Script" id=2]
+[ext_resource path="res://UI and Menus/satisfactionOverlay.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
@@ -155,6 +156,12 @@ custom_fonts/font = SubResource( 6 )
 text = "Confirm & Continue"
 align = 2
 icon_align = 2
+
+[node name="Control" parent="." instance=ExtResource( 3 )]
+margin_left = 343.0
+margin_top = 405.0
+margin_right = 343.0
+margin_bottom = 405.0
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/BillBon" to="." method="_on_BillBon_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/EvelynCaddel" to="." method="_on_EvelynCaddel_pressed"]

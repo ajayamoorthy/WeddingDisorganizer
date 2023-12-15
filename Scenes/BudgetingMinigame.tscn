@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/BudgetingMinigame.gd" type="Script" id=1]
 [ext_resource path="res://Milku.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI and Menus/satisfactionOverlay.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=4]
 size = 75
@@ -170,6 +171,12 @@ custom_fonts/font = SubResource( 8 )
 text = "Confirm & Continue"
 align = 2
 icon_align = 2
+
+[node name="Control" parent="." instance=ExtResource( 3 )]
+margin_left = 40.0
+margin_top = 848.0
+margin_right = 40.0
+margin_bottom = 848.0
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/FrugalBudget" to="." method="_on_FrugalBudget_pressed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/FrugalBudget" to="." method="_on_FrugalBudget_toggled"]
