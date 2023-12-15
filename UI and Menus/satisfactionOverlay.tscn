@@ -92,5 +92,3 @@ custom_fonts/font = SubResource( 2 )
 text = "Chauntal's Satisfaction"
 align = 1
 valign = 1
-
-[connection signal="value_changed" from="CanvasLayer/MarginContainer/AllElements/NicSatisfaction/TextureProgress" to="CanvasLayer/MarginContainer/AllElements/NicSatisfaction/TextureProgress" method="_on_TextureProgress_value_changed"]
